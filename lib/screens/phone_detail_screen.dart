@@ -21,8 +21,11 @@ class PhoneDetailScreen extends StatelessWidget {
             ]),
             const SizedBox(height: 16.0),
             _buildInfoCard('PhoneData', [
-              _buildInfoRow('Color', phone.data.color),
-              _buildInfoRow('Capacity', phone.data.capacity.toString()),
+              _buildInfoRow('Color', phone.data?.color ?? 'Unknown'),
+              _buildInfoRow(
+                'Capacity',
+                phone.data?.capacity?.toString() ?? 'Unknown',
+              ),
             ]),
           ],
         ),

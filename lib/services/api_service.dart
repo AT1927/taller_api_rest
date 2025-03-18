@@ -8,7 +8,7 @@ class ApiService {
   Future<List<Phone>> getPhones() async {
     try {
       final response = await http.get(
-        Uri.parse('${AppConstants.baseUrl}${AppConstants.phonesEndpoint}'),
+        Uri.parse('${AppConstants.baseUrl}${AppConstants.objectsEndpoint}'),
       );
 
       if (response.statusCode == 200) {
@@ -25,7 +25,7 @@ class ApiService {
   Future<Phone> getPhoneById(int id) async {
     try {
       final response = await http.get(
-        Uri.parse('${AppConstants.baseUrl}${AppConstants.phonesEndpoint}/$id'),
+        Uri.parse('${AppConstants.baseUrl}${AppConstants.objectsEndpoint}/$id'),
       );
 
       if (response.statusCode == 200) {
