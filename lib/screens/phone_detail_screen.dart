@@ -68,7 +68,7 @@ class PhoneDetailScreen extends StatelessWidget {
               label,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.grey,
+                color: Color.fromARGB(255, 69, 67, 67),
               ),
             ),
           ),

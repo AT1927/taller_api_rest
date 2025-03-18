@@ -16,14 +16,14 @@ class PhoneCard extends StatelessWidget {
       child: ListTile(
         contentPadding: const EdgeInsets.all(16.0),
         leading: CircleAvatar(
-          backgroundColor: Colors.blue,
+          backgroundColor: const Color.fromARGB(255, 243, 162, 69),
           child: Text(
-            phone.name.substring(0, 1),
-            style: const TextStyle(color: Colors.white),
+            phone.id.substring(0, 1),
+            style: const TextStyle(color: Color.fromARGB(255, 32, 31, 31)),
           ),
         ),
         title: Text(
-          phone.id.toString(),
+          phone.name.toString(),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Column(

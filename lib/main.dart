@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter REST API - Phones',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: false,
       ),
