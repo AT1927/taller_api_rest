@@ -1,83 +1,119 @@
 # app_flutter_rest
 
-Example of Rest Api in Flutter
+Example of Rest Api in Flutter - Phone's Objects
 
 ## Resources
 
-- [Api Rest](https://jsonplaceholder.typicode.com/)
+- [Api Rest](https://api.restful-api.dev/objects)
 
 ## Response
 
 ```
 [
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
+   {
+      "id": "1",
+      "name": "Google Pixel 6 Pro",
+      "data": {
+         "color": "Cloudy White",
+         "capacity": "128 GB"
       }
-    },
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
-    }
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "address": {
-      "street": "Victor Plains",
-      "suite": "Suite 879",
-      "city": "Wisokyburgh",
-      "zipcode": "90566-7771",
-      "geo": {
-        "lat": "-43.9509",
-        "lng": "-34.4618"
+   },
+   {
+      "id": "2",
+      "name": "Apple iPhone 12 Mini, 256GB, Blue",
+      "data": null
+   },
+   {
+      "id": "3",
+      "name": "Apple iPhone 12 Pro Max",
+      "data": {
+         "color": "Cloudy White",
+         "capacity GB": 512
       }
-    },
-    "phone": "010-692-6593 x09125",
-    "website": "anastasia.net",
-    "company": {
-      "name": "Deckow-Crist",
-      "catchPhrase": "Proactive didactic contingency",
-      "bs": "synergize scalable supply-chains"
-    }
-  },
-  {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "username": "Samantha",
-    "email": "Nathan@yesenia.net",
-    "address": {
-      "street": "Douglas Extension",
-      "suite": "Suite 847",
-      "city": "McKenziehaven",
-      "zipcode": "59590-4157",
-      "geo": {
-        "lat": "-68.6102",
-        "lng": "-47.0653"
+   },
+   {
+      "id": "4",
+      "name": "Apple iPhone 11, 64GB",
+      "data": {
+         "price": 389.99,
+         "color": "Purple"
       }
-    },
-    "phone": "1-463-123-4447",
-    "website": "ramiro.info",
-    "company": {
-      "name": "Romaguera-Jacobson",
-      "catchPhrase": "Face to face bifurcated interface",
-      "bs": "e-enable strategic applications"
-    }
-  }
+   },
+   {
+      "id": "5",
+      "name": "Samsung Galaxy Z Fold2",
+      "data": {
+         "price": 689.99,
+         "color": "Brown"
+      }
+   },
+   {
+      "id": "6",
+      "name": "Apple AirPods",
+      "data": {
+         "generation": "3rd",
+         "price": 120
+      }
+   },
+   {
+      "id": "7",
+      "name": "Apple MacBook Pro 16",
+      "data": {
+         "year": 2019,
+         "price": 1849.99,
+         "CPU model": "Intel Core i9",
+         "Hard disk size": "1 TB"
+      }
+   },
+   {
+      "id": "8",
+      "name": "Apple Watch Series 8",
+      "data": {
+         "Strap Colour": "Elderberry",
+         "Case Size": "41mm"
+      }
+   },
+   {
+      "id": "9",
+      "name": "Beats Studio3 Wireless",
+      "data": {
+         "Color": "Red",
+         "Description": "High-performance wireless noise cancelling headphones"
+      }
+   },
+   {
+      "id": "10",
+      "name": "Apple iPad Mini 5th Gen",
+      "data": {
+         "Capacity": "64 GB",
+         "Screen size": 7.9
+      }
+   },
+   {
+      "id": "11",
+      "name": "Apple iPad Mini 5th Gen",
+      "data": {
+         "Capacity": "254 GB",
+         "Screen size": 7.9
+      }
+   },
+   {
+      "id": "12",
+      "name": "Apple iPad Air",
+      "data": {
+         "Generation": "4th",
+         "Price": "419.99",
+         "Capacity": "64 GB"
+      }
+   },
+   {
+      "id": "13",
+      "name": "Apple iPad Air",
+      "data": {
+         "Generation": "4th",
+         "Price": "519.99",
+         "Capacity": "256 GB"
+      }
+   }
 ]
 ```
