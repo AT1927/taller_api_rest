@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter_rest/screens/user_list_screen.dart';
+import 'package:app_flutter_rest/screens/phone_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter REST API',
+      title: 'Flutter REST API - Phones',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: false,
       ),
-      home: const UserListScreen(),
+      home: const PhoneListScreen(),
     );
   }
 }
