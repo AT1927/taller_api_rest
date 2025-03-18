@@ -1,58 +1,58 @@
 import 'package:flutter/material.dart';
 
-import 'package:app_flutter_rest/models/user.dart';
+import 'package:app_flutter_rest/models/phone.dart';
 import 'package:app_flutter_rest/services/api_service.dart';
 import 'package:app_flutter_rest/widgets/error_message.dart';
-import 'package:app_flutter_rest/widgets/user_card.dart';
+import 'package:app_flutter_rest/widgets/phone_card.dart';
 
-class UserListScreen extends StatefulWidget {
-  const UserListScreen({super.key});
+class PhoneListScreen extends StatefulWidget {
+  const PhoneListScreen({super.key});
 
   @override
-  State<UserListScreen> createState() => _UserListScreenState();
+  State<PhoneListScreen> createState() => _PhoneListScreenState();
 }
 
-class _UserListScreenState extends State<UserListScreen> {
+class _PhoneListScreenState extends State<PhoneListScreen> {
   final ApiService _apiService = ApiService();
-  late Future<List<User>> _usersFuture;
+  late Future<List<Phone>> _phonesFuture;
 
   @override
   void initState() {
     super.initState();
-    _loadUsers();
+    _loadPhones();
   }
 
-  void _loadUsers() {
+  void _loadPhones() {
     setState(() {
-      _usersFuture = _apiService.getUsers();
+      _phonesFuture = _apiService.getPhones();
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('User List')),
-      body: FutureBuilder<List<User>>(
-        future: _usersFuture,
+      appBar: AppBar(title: const Text('Phone List')),
+      body: FutureBuilder<List<Phone>>(
+        future: _phonesFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return ErrorMessage(
-              message: 'Failed to load users: ${snapshot.error}',
-              onRetry: _loadUsers,
+              message: 'Failed to load phones: ${snapshot.error}',
+              onRetry: _loadPhones,
             );
           } else if (snapshot.hasData && snapshot.data!.isEmpty) {
-            return const Center(child: Text('No users found'));
+            return const Center(child: Text('No phones found'));
           } else if (snapshot.hasData) {
             return RefreshIndicator(
               onRefresh: () async {
-                _loadUsers();
+                _loadPhones();
               },
               child: ListView.builder(
                 itemCount: snapshot.data!.length,
                 itemBuilder: (context, index) {
-                  return UserCard(user: snapshot.data![index]);
+                  return PhoneCard(phone: snapshot.data![index]);
                 },
               ),
             );

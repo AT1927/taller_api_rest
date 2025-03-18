@@ -1,43 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter_rest/models/user.dart';
+import 'package:app_flutter_rest/models/phone.dart';
 
-class UserDetailScreen extends StatelessWidget {
-  final User user;
+class PhoneDetailScreen extends StatelessWidget {
+  final Phone phone;
 
-  const UserDetailScreen({super.key, required this.user});
+  const PhoneDetailScreen({super.key, required this.phone});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(user.name)),
+      appBar: AppBar(title: Text(phone.name)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildInfoCard('Personal Information', [
-              _buildInfoRow('Name', user.name),
-              _buildInfoRow('Username', '@${user.username}'),
-              _buildInfoRow('Email', user.email),
-              _buildInfoRow('Phone', user.phone),
-              _buildInfoRow('Website', user.website),
+            _buildInfoCard('Phone Information', [
+              _buildInfoRow('Id Phone', phone.id.toString()),
+              _buildInfoRow('Name Phone', phone.name),
             ]),
             const SizedBox(height: 16.0),
-            _buildInfoCard('Address', [
-              _buildInfoRow('Street', user.address.street),
-              _buildInfoRow('Suite', user.address.suite),
-              _buildInfoRow('City', user.address.city),
-              _buildInfoRow('Zipcode', user.address.zipcode),
-              _buildInfoRow(
-                'Coordinates',
-                '${user.address.geo.lat}, ${user.address.geo.lng}',
-              ),
-            ]),
-            const SizedBox(height: 16.0),
-            _buildInfoCard('Company', [
-              _buildInfoRow('Name', user.company.name),
-              _buildInfoRow('Catch Phrase', user.company.catchPhrase),
-              _buildInfoRow('BS', user.company.bs),
+            _buildInfoCard('PhoneData', [
+              _buildInfoRow('Color', phone.data.color),
+              _buildInfoRow('Capacity', phone.data.capacity.toString()),
             ]),
           ],
         ),

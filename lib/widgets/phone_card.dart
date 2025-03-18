@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:app_flutter_rest/models/user.dart';
-import 'package:app_flutter_rest/screens/user_detail_screen.dart';
+import 'package:app_flutter_rest/models/phone.dart';
+import 'package:app_flutter_rest/screens/phone_detail_screen.dart';
 
-class UserCard extends StatelessWidget {
-  final User user;
+class PhoneCard extends StatelessWidget {
+  final Phone phone;
 
-  const UserCard({super.key, required this.user});
+  const PhoneCard({super.key, required this.phone});
 
   @override
   Widget build(BuildContext context) {
@@ -18,28 +18,23 @@ class UserCard extends StatelessWidget {
         leading: CircleAvatar(
           backgroundColor: Colors.blue,
           child: Text(
-            user.name.substring(0, 1),
+            phone.name.substring(0, 1),
             style: const TextStyle(color: Colors.white),
           ),
         ),
         title: Text(
-          user.name,
+          phone.id.toString(),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 4.0),
-            Text('@${user.username}'),
-            const SizedBox(height: 4.0),
-            Text(user.email),
-          ],
+          children: [const SizedBox(height: 4.0), Text(phone.name)],
         ),
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => UserDetailScreen(user: user),
+              builder: (context) => PhoneDetailScreen(phone: phone),
             ),
           );
         },
